@@ -1,0 +1,214 @@
+.reports-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
+  padding: 0.35rem;
+  background: var(--aasana-card);
+  border-radius: var(--aasana-radius);
+  box-shadow: var(--aasana-shadow);
+  border: 1px solid var(--aasana-border);
+}
+
+.reports-tab {
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.65rem 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--aasana-text-muted);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.reports-tab:hover {
+  background: #e8eaf6;
+  color: var(--aasana-navy);
+}
+
+.reports-tab--active {
+  background: linear-gradient(135deg, var(--aasana-blue), #0d47a1);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(25, 118, 210, 0.35);
+}
+
+.reports-panel {
+  background: var(--aasana-card);
+  border-radius: var(--aasana-radius);
+  box-shadow: var(--aasana-shadow);
+  border: 1px solid var(--aasana-border);
+  padding: 1.5rem 1.5rem 1.35rem;
+}
+
+.reports-panel h2 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--aasana-navy);
+}
+
+.reports-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  margin-bottom: 1.25rem;
+}
+
+.reports-table-wrap {
+  overflow: auto;
+  border-radius: 8px;
+  border: 1px solid var(--aasana-border);
+}
+
+.reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.reports-table thead th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--aasana-navy);
+  background: linear-gradient(180deg, #f0f2f8, #e8ebf4);
+  border-bottom: 2px solid var(--aasana-border);
+}
+
+.reports-table tbody tr:nth-child(odd) {
+  background: #fff;
+}
+
+.reports-table tbody tr:nth-child(even) {
+  background: #f7f8fc;
+}
+
+.reports-table tbody tr:hover {
+  background: #e3f2fd !important;
+}
+
+.reports-table td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--aasana-border);
+}
+
+.reports-progress {
+  margin-top: 1rem;
+}
+
+.reports-progress__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--aasana-navy);
+}
+
+.reports-progress__value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--aasana-blue);
+}
+
+.reports-progress__track {
+  height: 12px;
+  border-radius: 999px;
+  background: #e8eaf6;
+  overflow: hidden;
+  border: 1px solid var(--aasana-border);
+}
+
+.reports-progress__fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #43a047, #66bb6a);
+  transition: width 0.35s ease;
+}
+
+.reports-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.reports-stat {
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: #f5f6fa;
+  border: 1px solid var(--aasana-border);
+  font-size: 0.78rem;
+}
+
+.reports-stat strong {
+  display: block;
+  font-size: 1.15rem;
+  color: var(--aasana-navy);
+  margin-top: 0.25rem;
+}
+
+.reports-pagination {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.reports-pagination button {
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  border: 1px solid var(--aasana-border);
+  background: #fff;
+  cursor: pointer;
+}
+
+.reports-pagination button:hover:not(:disabled) {
+  border-color: var(--aasana-blue);
+  background: #e3f2fd;
+}
+
+.reports-pagination button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.reports-btn-primary {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.55rem 1.15rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--aasana-blue);
+  color: #fff;
+  cursor: pointer;
+  align-self: flex-end;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.35);
+}
+
+.reports-btn-primary:hover:not(:disabled) {
+  background: #1565c0;
+}
+
+.reports-btn-primary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.reports-inline-loading {
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: var(--aasana-text-muted);
+}

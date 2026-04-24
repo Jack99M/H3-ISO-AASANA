@@ -1,13 +1,157 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --aasana-navy: #1a237e;
+  --aasana-blue: #1976d2;
+  --aasana-bg: #f5f6fa;
+  --aasana-text: #1a1a2e;
+  --aasana-text-muted: #5c6370;
+  --aasana-card: #ffffff;
+  --aasana-border: #e2e5ec;
+  --aasana-shadow: 0 4px 20px rgba(26, 35, 126, 0.08);
+  --aasana-shadow-lg: 0 12px 40px rgba(26, 35, 126, 0.12);
+  --aasana-radius: 12px;
+  --aasana-radius-sm: 8px;
+  /* Estados de vuelo */
+  --st-programado-bg: #e3f2fd;
+  --st-programado-fg: #0d47a1;
+  --st-abordando-bg: #e8f5e9;
+  --st-abordando-fg: #1b5e20;
+  --st-despego-bg: #eceff1;
+  --st-despego-fg: #455a64;
+  --st-cancelado-bg: #ffebee;
+  --st-cancelado-fg: #b71c1c;
+  --st-retrasado-bg: #fff3e0;
+  --st-retrasado-fg: #e65100;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--aasana-bg);
+  color: var(--aasana-text);
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100vh;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace;
+}
+
+/* Utilidades de página (app autenticada) */
+.page-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--aasana-navy);
+  letter-spacing: -0.02em;
+}
+
+.page-subtitle {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  color: var(--aasana-text-muted);
+}
+
+.card-surface {
+  background: var(--aasana-card);
+  border-radius: var(--aasana-radius);
+  box-shadow: var(--aasana-shadow);
+  border: 1px solid var(--aasana-border);
+}
+
+/* Badges de estado de vuelo (reutilizable) */
+.aasana-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.aasana-badge--programado {
+  background: var(--st-programado-bg);
+  color: var(--st-programado-fg);
+}
+
+.aasana-badge--abordando {
+  background: var(--st-abordando-bg);
+  color: var(--st-abordando-fg);
+}
+
+.aasana-badge--despego {
+  background: var(--st-despego-bg);
+  color: var(--st-despego-fg);
+}
+
+.aasana-badge--cancelado {
+  background: var(--st-cancelado-bg);
+  color: var(--st-cancelado-fg);
+}
+
+.aasana-badge--retrasado {
+  background: var(--st-retrasado-bg);
+  color: var(--st-retrasado-fg);
+}
+
+/* Inputs globales (formularios internos) */
+.aasana-input,
+.aasana-select {
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--aasana-border);
+  border-radius: var(--aasana-radius-sm);
+  background: #fff;
+  color: var(--aasana-text);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.aasana-input:focus,
+.aasana-select:focus {
+  outline: none;
+  border-color: var(--aasana-blue);
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.2);
+}
+
+.aasana-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--aasana-navy);
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.02em;
+}
+
+/* Carga genérica */
+.aasana-loading {
+  padding: 2rem;
+  text-align: center;
+  color: var(--aasana-text-muted);
+  font-size: 0.95rem;
+}
+
+.aasana-error-text {
+  color: #c62828;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
 }

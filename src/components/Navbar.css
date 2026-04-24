@@ -1,0 +1,149 @@
+.aasana-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--aasana-navy);
+  color: #e8eaf6;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.aasana-nav__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  padding: 0.85rem 1.25rem;
+}
+
+.aasana-nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.aasana-nav__icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
+}
+
+.aasana-nav__title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+}
+
+.aasana-nav__tag {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.85;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+}
+
+.aasana-nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.aasana-nav__link {
+  color: rgba(232, 234, 246, 0.92);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.45rem 0.65rem;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.aasana-nav__link:hover {
+  background: rgba(25, 118, 210, 0.35);
+  color: #fff;
+}
+
+.aasana-nav__link--active {
+  background: var(--aasana-blue);
+  color: #fff;
+  font-weight: 600;
+}
+
+.aasana-nav__user {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.82rem;
+}
+
+.aasana-nav__name {
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.aasana-nav__badge-role {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+
+.aasana-nav__badge-role--admin {
+  background: linear-gradient(135deg, #ffd54f, #ffb300);
+  color: #3e2723;
+}
+
+.aasana-nav__badge-role--operador {
+  background: #26a69a;
+  color: #fff;
+}
+
+.aasana-nav__badge-role--publico {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.aasana-nav__badge-ops {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(129, 199, 132, 0.25);
+  color: #c8e6c9;
+  border: 1px solid rgba(129, 199, 132, 0.5);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+.aasana-nav__logout {
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.aasana-nav__logout:hover {
+  background: rgba(25, 118, 210, 0.45);
+  border-color: var(--aasana-blue);
+}

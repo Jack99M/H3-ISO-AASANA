@@ -1,0 +1,83 @@
+.fc-page {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.fc-back {
+  display: inline-flex;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--aasana-blue);
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.fc-back:hover {
+  color: var(--aasana-navy);
+  text-decoration: underline;
+}
+
+.fc-card {
+  background: var(--aasana-card);
+  border-radius: var(--aasana-radius);
+  box-shadow: var(--aasana-shadow-lg);
+  border: 1px solid var(--aasana-border);
+  padding: 2rem 1.75rem 1.75rem;
+}
+
+.fc-card h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--aasana-navy);
+}
+
+.fc-card .page-subtitle {
+  margin-bottom: 1.5rem;
+}
+
+.fc-field {
+  margin-bottom: 1.15rem;
+}
+
+.fc-field label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--aasana-navy);
+  margin-bottom: 0.4rem;
+}
+
+.fc-field .aasana-input,
+.fc-field .aasana-select {
+  width: 100%;
+}
+
+.fc-submit {
+  width: 100%;
+  margin-top: 0.5rem;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0.95rem 1.25rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--aasana-blue), var(--aasana-navy));
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(26, 35, 126, 0.35);
+  letter-spacing: 0.02em;
+  transition: transform 0.12s ease, box-shadow 0.15s ease;
+}
+
+.fc-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(26, 35, 126, 0.45);
+}
+
+.fc-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}

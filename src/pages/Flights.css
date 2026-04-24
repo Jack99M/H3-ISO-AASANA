@@ -1,0 +1,110 @@
+.flights-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem 1.5rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--aasana-card);
+  border-radius: var(--aasana-radius);
+  box-shadow: var(--aasana-shadow);
+  border: 1px solid var(--aasana-border);
+  margin-bottom: 1.25rem;
+}
+
+.flights-toolbar__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.flights-table-wrap {
+  background: var(--aasana-card);
+  border-radius: var(--aasana-radius);
+  box-shadow: var(--aasana-shadow);
+  border: 1px solid var(--aasana-border);
+  overflow: auto;
+}
+
+.flights-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.flights-table thead th {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--aasana-navy);
+  background: linear-gradient(180deg, #f0f2f8 0%, #e8ebf4 100%);
+  border-bottom: 2px solid var(--aasana-border);
+  white-space: nowrap;
+}
+
+.flights-table tbody tr:nth-child(even) {
+  background: #fafbfd;
+}
+
+.flights-table tbody tr {
+  transition: background 0.12s ease;
+}
+
+.flights-table tbody tr:hover {
+  background: #e8f0fe !important;
+}
+
+.flights-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--aasana-border);
+  color: var(--aasana-text);
+}
+
+.flights-table__link {
+  font-weight: 600;
+  color: var(--aasana-blue);
+  text-decoration: none;
+}
+
+.flights-table__link:hover {
+  text-decoration: underline;
+  color: var(--aasana-navy);
+}
+
+.flights-pagination {
+  margin-top: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.flights-pagination button {
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--aasana-border);
+  background: #fff;
+  color: var(--aasana-navy);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.flights-pagination button:hover:not(:disabled) {
+  background: #e3f2fd;
+  border-color: var(--aasana-blue);
+}
+
+.flights-pagination button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.flights-pagination span {
+  font-size: 0.85rem;
+  color: var(--aasana-text-muted);
+}

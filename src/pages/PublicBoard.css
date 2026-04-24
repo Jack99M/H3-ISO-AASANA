@@ -1,0 +1,245 @@
+.pb-root {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0d1425 0%, #0a1628 40%, #060d18 100%);
+  color: #e8eaf6;
+}
+
+.pb-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 2.5rem;
+}
+
+.pb-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(25, 118, 210, 0.35);
+}
+
+.pb-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.pb-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.pb-plane {
+  font-size: 2.75rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 8px rgba(25, 118, 210, 0.5));
+}
+
+.pb-logo-text {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #fff;
+  text-shadow: 0 2px 20px rgba(25, 118, 210, 0.45);
+}
+
+.pb-tagline {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(200, 212, 255, 0.75);
+  font-weight: 500;
+}
+
+.pb-login {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(100, 181, 246, 0.6);
+  color: #90caf9;
+  text-decoration: none;
+  background: rgba(25, 118, 210, 0.12);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.pb-login:hover {
+  background: rgba(25, 118, 210, 0.35);
+  color: #fff;
+}
+
+.pb-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  align-items: flex-end;
+  padding: 1rem 1.15rem;
+  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--aasana-radius);
+}
+
+.pb-toolbar .aasana-label {
+  color: rgba(200, 212, 255, 0.9);
+}
+
+.pb-toolbar .aasana-input,
+.pb-toolbar .aasana-select {
+  background: rgba(13, 33, 55, 0.85);
+  border-color: rgba(100, 181, 246, 0.25);
+  color: #fff;
+}
+
+.pb-toolbar .aasana-input:focus,
+.pb-toolbar .aasana-select:focus {
+  border-color: var(--aasana-blue);
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.25);
+}
+
+.pb-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .pb-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pb-panel {
+  border-radius: var(--aasana-radius);
+  padding: 1rem 1rem 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.pb-panel--arr {
+  border-top: 3px solid #42a5f5;
+}
+
+.pb-panel--dep {
+  border-top: 3px solid #26a69a;
+}
+
+.pb-panel h2 {
+  margin: 0 0 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #90caf9;
+}
+
+.pb-panel--dep h2 {
+  color: #80cbc4;
+}
+
+.pb-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.pb-table thead th {
+  text-align: left;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(200, 212, 255, 0.55);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pb-table tbody tr:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.pb-table tbody tr:hover {
+  background: rgba(25, 118, 210, 0.15) !important;
+}
+
+.pb-table td {
+  padding: 0.65rem 0.65rem;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.pb-flight {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #fff;
+  letter-spacing: 0.04em;
+}
+
+.pb-route {
+  color: rgba(200, 212, 255, 0.85);
+  font-weight: 600;
+}
+
+.pb-time-big {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.pb-time-big__clock {
+  font-size: 1.35rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.pb-time-big__date {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(200, 212, 255, 0.55);
+}
+
+/* Badges oscuros sobre fondo oscuro */
+.pb-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.pb-badge--programado {
+  background: rgba(25, 118, 210, 0.35);
+  color: #bbdefb;
+}
+
+.pb-badge--abordando {
+  background: rgba(67, 160, 71, 0.35);
+  color: #c8e6c9;
+}
+
+.pb-badge--despego {
+  background: rgba(120, 144, 156, 0.4);
+  color: #eceff1;
+}
+
+.pb-badge--cancelado {
+  background: rgba(229, 57, 53, 0.4);
+  color: #ffcdd2;
+}
+
+.pb-badge--retrasado {
+  background: rgba(251, 140, 0, 0.35);
+  color: #ffe0b2;
+}

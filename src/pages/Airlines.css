@@ -1,0 +1,194 @@
+.crud-form {
+  margin-bottom: 1.5rem;
+  padding: 1.35rem 1.5rem;
+  background: var(--aasana-card);
+  border-radius: var(--aasana-radius);
+  box-shadow: var(--aasana-shadow);
+  border: 1px solid var(--aasana-border);
+  max-width: 640px;
+}
+
+.crud-form h2 {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--aasana-navy);
+}
+
+.crud-form__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .crud-form__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.crud-btn-primary {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.55rem 1.15rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--aasana-blue);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.35);
+}
+
+.crud-btn-primary:hover {
+  background: #1565c0;
+}
+
+.crud-table-wrap {
+  background: var(--aasana-card);
+  border-radius: var(--aasana-radius);
+  box-shadow: var(--aasana-shadow);
+  border: 1px solid var(--aasana-border);
+  overflow: auto;
+}
+
+.crud-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.crud-table thead th {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--aasana-navy);
+  background: linear-gradient(180deg, #f5f6fa 0%, #eceff7 100%);
+  border-bottom: 2px solid var(--aasana-border);
+}
+
+.crud-table tbody tr:nth-child(even) {
+  background: #fafbfd;
+}
+
+.crud-table tbody tr:hover {
+  background: #e8f0fe !important;
+}
+
+.crud-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--aasana-border);
+}
+
+.crud-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.crud-btn-edit {
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--aasana-blue);
+  background: #e3f2fd;
+  color: var(--aasana-navy);
+  cursor: pointer;
+}
+
+.crud-btn-edit:hover {
+  background: var(--aasana-blue);
+  color: #fff;
+}
+
+.crud-btn-del {
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #e57373;
+  background: #ffebee;
+  color: #b71c1c;
+  cursor: pointer;
+}
+
+.crud-btn-del:hover {
+  background: #c62828;
+  color: #fff;
+  border-color: #c62828;
+}
+
+.crud-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(26, 35, 126, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+.crud-modal__card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--aasana-card);
+  border-radius: var(--aasana-radius);
+  box-shadow: var(--aasana-shadow-lg);
+  padding: 1.5rem 1.5rem 1.35rem;
+  border: 1px solid var(--aasana-border);
+}
+
+.crud-modal__card h2 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  color: var(--aasana-navy);
+}
+
+.crud-modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.crud-btn-ghost {
+  font-family: inherit;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--aasana-border);
+  background: #fff;
+  cursor: pointer;
+}
+
+.crud-btn-ghost:hover {
+  background: #f5f6fa;
+}
+
+/* Campo compacto en modales (misma idea que FlightCreate) */
+.crud-field {
+  margin-bottom: 0.85rem;
+}
+
+.crud-field label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--aasana-navy);
+  margin-bottom: 0.4rem;
+}
+
+.crud-field .aasana-input {
+  width: 100%;
+}

@@ -1,0 +1,132 @@
+.dashboard__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-summary {
+  background: var(--aasana-card);
+  border-radius: var(--aasana-radius);
+  box-shadow: var(--aasana-shadow);
+  border: 1px solid var(--aasana-border);
+  padding: 1.35rem 1.5rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.dashboard-summary__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--aasana-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.dashboard-summary__date {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--aasana-navy);
+}
+
+.dashboard-summary__total {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--aasana-blue);
+  letter-spacing: -0.03em;
+}
+
+.dashboard-summary__hint {
+  font-size: 0.85rem;
+  color: var(--aasana-text-muted);
+  margin: 0;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+  gap: 1rem;
+}
+
+.dashboard-card {
+  background: var(--aasana-card);
+  border-radius: var(--aasana-radius);
+  box-shadow: var(--aasana-shadow);
+  border: 1px solid var(--aasana-border);
+  padding: 1.1rem 1rem 1.15rem;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--aasana-shadow-lg);
+}
+
+.dashboard-card__icon {
+  font-size: 1.75rem;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.dashboard-card__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--aasana-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+}
+
+.dashboard-card__count {
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.dashboard-card--programado {
+  border-top: 3px solid var(--st-programado-fg);
+}
+
+.dashboard-card--programado .dashboard-card__count {
+  color: var(--st-programado-fg);
+}
+
+.dashboard-card--abordando {
+  border-top: 3px solid var(--st-abordando-fg);
+}
+
+.dashboard-card--abordando .dashboard-card__count {
+  color: var(--st-abordando-fg);
+}
+
+.dashboard-card--despego {
+  border-top: 3px solid var(--st-despego-fg);
+}
+
+.dashboard-card--despego .dashboard-card__count {
+  color: var(--st-despego-fg);
+}
+
+.dashboard-card--cancelado {
+  border-top: 3px solid var(--st-cancelado-fg);
+}
+
+.dashboard-card--cancelado .dashboard-card__count {
+  color: var(--st-cancelado-fg);
+}
+
+.dashboard-card--retrasado {
+  border-top: 3px solid var(--st-retrasado-fg);
+}
+
+.dashboard-card--retrasado .dashboard-card__count {
+  color: var(--st-retrasado-fg);
+}
